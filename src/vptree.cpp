@@ -4,8 +4,6 @@
 #include <stdio.h>
 #include "vptree.h"
 
-//
-
 using namespace Rcpp;
 
 inline double eudist(const NumericVector& x, const NumericVector& y) {

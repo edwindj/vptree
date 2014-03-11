@@ -7,6 +7,16 @@
 #' @param k \code{integer} number of neighbors
 #' @useDynLib vptree
 #' @export
+vpmattree <- function(m, k) {
+    .Call('vptree_vpmattree', PACKAGE = 'vptree', m, k)
+}
+
+#' build a vantage point tree
+#' 
+#' @param m \code{matrix}
+#' @param k \code{integer} number of neighbors
+#' @useDynLib vptree
+#' @export
 vptree <- function(m, k) {
     .Call('vptree_vptree', PACKAGE = 'vptree', m, k)
 }

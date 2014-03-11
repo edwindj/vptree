@@ -5,6 +5,22 @@
 
 using namespace Rcpp;
 
+// vpmattree
+List vpmattree(NumericMatrix m, int k);
+RcppExport SEXP vptree_vpmattree(SEXP mSEXP, SEXP kSEXP) {
+BEGIN_RCPP
+    SEXP __sexp_result;
+    {
+        Rcpp::RNGScope __rngScope;
+        Rcpp::traits::input_parameter< NumericMatrix >::type m(mSEXP );
+        Rcpp::traits::input_parameter< int >::type k(kSEXP );
+        List __result = vpmattree(m, k);
+        PROTECT(__sexp_result = Rcpp::wrap(__result));
+    }
+    UNPROTECT(1);
+    return __sexp_result;
+END_RCPP
+}
 // vptree
 List vptree(NumericMatrix m, int k);
 RcppExport SEXP vptree_vptree(SEXP mSEXP, SEXP kSEXP) {
