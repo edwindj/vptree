@@ -5,6 +5,7 @@
 #' 
 #' @param m \code{matrix}
 #' @param k \code{integer} number of neighbors
+#' @useDynLib vptree
 #' @export
 vptree <- function(m, k) {
     .Call('vptree_vptree', PACKAGE = 'vptree', m, k)

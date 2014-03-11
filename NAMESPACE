@@ -1,3 +1,2 @@
+export(vptree)
 useDynLib(vptree)
-exportPattern("^[[:alpha:]]+")
-importFrom(Rcpp, evalCpp)

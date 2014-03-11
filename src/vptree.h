@@ -99,7 +99,7 @@ private:
 
             int median = ( upper + lower ) / 2;
 
-            // partitian around the median distance
+            // partition around the median distance
             std::nth_element(
                         _items.begin() + lower + 1,
                         _items.begin() + median,
@@ -113,7 +113,6 @@ private:
             node->left = buildFromPoints( lower + 1, median );
             node->right = buildFromPoints( median, upper );
         }
-
         return node;
     }
 
@@ -121,7 +120,7 @@ private:
                  std::priority_queue<HeapItem>& heap, double &_tau ) const
     {
         if ( node == NULL ) return;
-
+        
         double dist = distance( _items[node->index], target );
         //printf("dist=%g tau=%gn", dist, _tau );
 

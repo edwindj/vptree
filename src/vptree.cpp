@@ -27,6 +27,7 @@ inline double eudist(const NumericVector& x, const NumericVector& y) {
 //' 
 //' @param m \code{matrix}
 //' @param k \code{integer} number of neighbors
+//' @useDynLib vptree
 //' @export
 //[[Rcpp::export]]
 List vptree(NumericMatrix m, int k){
@@ -43,9 +44,9 @@ List vptree(NumericMatrix m, int k){
     std::vector<NumericVector> n;
     std::vector<double> d;
     tree.search(rows[r], k+1, &n, &d);
-    NumericMatrix::Row row = dist(r,_);
-    NumericVector v(d.begin(),d.end());
-    row = v;
+    //NumericMatrix::Row row = dist(r,_);
+    //NumericVector v(d.begin(),d.end());
+    //row = v;
   }
   List z = List::create(_["dist"] = dist);
   return z;
