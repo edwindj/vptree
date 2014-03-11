@@ -4,6 +4,8 @@
 #include <stdio.h>
 #include "vptree.h"
 
+//
+
 using namespace Rcpp;
 
 inline double eudist(const NumericVector& x, const NumericVector& y) {
@@ -21,7 +23,11 @@ inline double eudist(const NumericVector& x, const NumericVector& y) {
 
     return sqrt(dist);
 }
-
+//' build a vantage point tree
+//' 
+//' @param m \code{matrix}
+//' @param k \code{integer} number of neighbors
+//' @export
 //[[Rcpp::export]]
 List vptree(NumericMatrix m, int k){
   std::vector<NumericVector> rows;

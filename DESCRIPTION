@@ -1,11 +1,11 @@
 Package: vptree
 Type: Package
-Title: What the package does (short line)
+Title: Vantage point tree / metric tree
 Version: 1.0
 Date: 2014-03-10
-Author: Who wrote it
+Author: Edwin de Jonge
 Maintainer: Who to complain to <yourfault@somewhere.net>
-Description: More about what it does (maybe more than one line)
+Description: Vantage point tree / metric tree
 License: What Licence is it under ?
 Imports: Rcpp (>= 0.11.0)
 LinkingTo: Rcpp

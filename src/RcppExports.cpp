@@ -7,7 +7,7 @@ using namespace Rcpp;
 
 // vptree
 List vptree(NumericMatrix m, int k);
-RcppExport SEXP vpt2_vptree(SEXP mSEXP, SEXP kSEXP) {
+RcppExport SEXP vptree_vptree(SEXP mSEXP, SEXP kSEXP) {
 BEGIN_RCPP
     SEXP __sexp_result;
     {
